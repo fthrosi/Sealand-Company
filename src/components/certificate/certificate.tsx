@@ -1,18 +1,61 @@
+"use client";
+
 import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
+import { motion, easeOut } from "motion/react";
 export default function Certificate() {
+  const titleVarian = {
+    hidden: { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
+    show: {
+      opacity: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      transition: { duration: 1, ease: easeOut },
+    },
+  };
+  const itemVariant = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0 },
+  };
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
   return (
     <section id="certificate" className="py-24  bg-background-secondary">
       <div className="container-layout flex flex-col items-center gap-16">
-        <div className="flex flex-col gap-4 w-full justify-center items-center">
-          <h2 className="text-primary xl:text-text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-4 w-full justify-center items-center"
+        >
+          <motion.h2
+            variants={titleVarian}
+            className="text-primary xl:text-text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold text-center"
+          >
             International Certification
-          </h2>
-          <p className="xl:w-182.5 sm:w-100 lg:w-140 text-muted text-center xl:text-lg text-xs lg:text-base">
+          </motion.h2>
+          <motion.p
+            variants={itemVariant}
+            className="xl:w-182.5 sm:w-100 lg:w-140 text-muted text-center xl:text-lg text-xs lg:text-base"
+          >
             Accredited and certified by leading maritime authorities worldwide
-          </p>
-        </div>
-        <div className="rounded-2xl w-fit bg-white border border-[#C9A85D] p-6 flex flex-col md:flex-row items-center gap-6">
+          </motion.p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="rounded-2xl w-fit bg-white border border-[#C9A85D] p-6 flex flex-col md:flex-row items-center gap-6"
+        >
           <Image
             src="/images/imo.jpg"
             alt="imo"
@@ -50,7 +93,7 @@ export default function Certificate() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -9,12 +9,11 @@ import { useState, useEffect, use } from "react";
 import { useRef } from "react";
 import { useSidebarStore } from "@/store/sidebar";
 import { useNavbarStore } from "@/store/navbar";
-// import { motion } from "motion/react";
+import { motion } from "motion/react";
 
 export default function Navbar() {
   const ref = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
-  // const [navbarHeight, setNavbarHeight] = useState(0);
   const navbarHeight = useNavbarStore((state) => state.navbarHeight);
   const setNavbarHeight = useNavbarStore((state) => state.setNavbarHeight);
   const pathname = usePathname();
@@ -55,7 +54,11 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
   return (
-    <header
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       ref={ref}
       className={`w-full
         ${
@@ -69,21 +72,6 @@ export default function Navbar() {
         }`}
       >
         <Link href="/" className="flex gap-3 items-center">
-          {/* <div
-            className={` ${
-              scrolled ? "bg-secondary" : "bg-background/20"
-            } rounded-[0.75rem] p-2.5`}
-          >
-            <Anchor className="2xl:size-7 size-5 text-white" />
-          </div>
-          <div className="flex flex-col">
-            <h1 className="2xl:text-xl text-base font-bold text-red-600">
-              PT Sea<span className="text-blue-700">land</span>
-            </h1>
-            <p className="2xl:text-xs text-[0.625rem] text-blue-700 uppercase">
-              Crewing International
-            </p>
-          </div> */}
           <img
             src={"/images/logo.png"}
             alt="Logo Sealand"
@@ -141,7 +129,10 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       <div
-        style={{ top: `${navbarHeight}px`, height: `calc(100vh - ${navbarHeight}px)` }}
+        style={{
+          top: `${navbarHeight}px`,
+          height: `calc(100vh - ${navbarHeight}px)`,
+        }}
         className={`
           md:hidden fixed overflow-y-auto w-full bg-white shadow-lg z-60 p-4
           transition-all duration-300 ease-in-out
@@ -153,7 +144,9 @@ export default function Navbar() {
           }
         `}
       >
-        <div className={`container-layout overflow-y-auto flex flex-col  gap-5`}>
+        <div
+          className={`container-layout overflow-y-auto flex flex-col  gap-5`}
+        >
           {navigationLinks.map((link) => (
             <div
               key={link.title}
@@ -183,6 +176,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

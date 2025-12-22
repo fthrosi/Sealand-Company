@@ -1,4 +1,40 @@
+"use client";
+
+import { motion, easeOut } from "motion/react";
+
 export function Gallery() {
+  const titleVarian = {
+    hidden: { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
+    show: {
+      opacity: 1,
+      clipPath: "inset(0% 0% 0% 0%)",
+      transition: { duration: 1, ease: easeOut },
+    },
+  };
+  const itemVariant = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0 },
+  };
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const cardVariant = {
+    hidden: { opacity: 0, scale: 0.9 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   const images = [
     {
       src: "/images/1.jpeg",
@@ -50,25 +86,44 @@ export function Gallery() {
       alt: "PT Sealand Team",
       span: "md:col-span-2 md:row-span-1",
     },
-  ]
+  ];
 
   return (
     <section id="galery" className="w-full bg-gallery py-16 md:py-24 lg:py-32">
       <div className="container-layout mx-auto">
         {/* Header */}
-        <div className="mb-12 md:mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gallery-foreground mb-4 text-balance">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mb-12 md:mb-16 text-center"
+        >
+          <motion.h2
+            variants={titleVarian}
+            className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-gallery-foreground mb-4 text-balance"
+          >
             Our Gallery
-          </h2>
-          <p className="text-lg md:text-xl text-gallery-muted max-w-2xl mx-auto text-pretty">
+          </motion.h2>
+          <motion.p
+            variants={itemVariant}
+            className="text-lg md:text-xl text-gallery-muted max-w-2xl mx-auto text-pretty"
+          >
             Explore our curated collection of stunning designs and inspirations
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]"
+        >
           {images.map((image, index) => (
-            <div
+            <motion.div
+              variants={cardVariant}
               key={index}
               className={`group relative overflow-hidden rounded-lg ${image.span} cursor-pointer transition-transform duration-300 hover:scale-[1.02]`}
             >
@@ -82,10 +137,10 @@ export function Gallery() {
                   <p className="text-white font-medium text-lg">{image.alt}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }

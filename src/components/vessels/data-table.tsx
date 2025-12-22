@@ -14,6 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
+import { motion } from "motion/react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -35,8 +36,23 @@ export function DataTable<TData, TValue>({
       },
     },
   });
+  const cardVariant = {
+    hidden: { opacity: 0, scale: 0.9 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   return (
-    <div>
+    <motion.div
+    variants={cardVariant}
+    initial="hidden"
+    whileInView="show"
+    viewport={{once:true}}
+    >
       <div className="overflow-hidden rounded-md border">
         <Table>
           <TableHeader className="bg-primary">
@@ -103,6 +119,6 @@ export function DataTable<TData, TValue>({
           Next
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
