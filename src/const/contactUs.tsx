@@ -11,7 +11,7 @@ export const DataContact:ContactUsInfo[] = [
     {
         icon: MapPin,
         title: "Head Office",
-        description: "Komplek gading bukit indah Blok L no 15, Jalan gading kiranan RT 018/RW 008 Kelapa Gading Jakarta Utara, 14240",
+        description: "Komplek gading bukit indah Blok L no 15, Jalan gading kirana RT 018/RW 008 Kelapa Gading Jakarta Utara, 14240",
         link: "https://maps.app.goo.gl/NWuzEyDQkH1jqaq86"
     },
     {
