@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TiktokIcon } from "@/icon/tiktokIcon";
 import { Instagram, Facebook } from "lucide-react";
 export default function Footer() {
   return (
@@ -42,6 +43,9 @@ export default function Footer() {
                 </Link>
                 <Link href={"/"} className="p-2.5 rounded-2xl bg-white/5">
                     <Facebook className="text-white size-5" />
+                </Link>
+                <Link target="_blank" href={"https://www.tiktok.com/@sealand.crewing.i?_r=1&_t=ZS-92QzFPj74Hl"} className="p-2.5 rounded-2xl bg-white/5">
+                <TiktokIcon className="text-white size-5" />
                 </Link>
             </div>
           </div>

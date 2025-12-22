@@ -1,5 +1,6 @@
 import { Ship } from "lucide-react";
 import { dataCareer, DetailCareer } from "@/const/careers";
+import Link from "next/link";
 export default function Careers() {
   return (
     <section id="career" className="bg-background-secondary flex items-center py-24 lg:min-h-dvh">
@@ -20,7 +21,7 @@ export default function Careers() {
             </p>
           </div>
         </div>
-        <div className="flex w-full flex-col lg:flex-row gap-8 2xl:justify-between">
+        <div className={`flex w-full flex-col lg:flex-row gap-8 ${dataCareer.length % 3 === 0 ? "lg:justify-between" : "lg:justify-start"}`}>
           {dataCareer.map((item, index) => (
             <div
               key={index}
@@ -57,9 +58,9 @@ export default function Careers() {
                   );
                 })}
               </div>
-              <button className="xl:py-3.5 py-2 w-full text-xs text-white rounded-[0.75rem] bg-linear-to-r from-accent to-secondary font-semibold text-center">
+              <Link target="_blank" href={"https://wa.me/6281294803664"}  className="xl:py-3.5 py-2 w-full text-xs text-white rounded-[0.75rem] bg-linear-to-r from-accent to-secondary font-semibold text-center">
                 Apply
-              </button>
+              </Link>
             </div>
           ))}
         </div>

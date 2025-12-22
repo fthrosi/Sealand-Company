@@ -40,8 +40,8 @@ export const vesselData: VesselType[] = [
   { no: 37, name: "MV BAO FU", flag: "HONGKONG" },
   { no: 38, name: "MV WANFU", flag: "HONGKONG" },
   { no: 39, name: "MV SHENG FU", flag: "HONGKONG" },
-  { no: 40, name: "MT GOLDEN PALM", flag: "-" },
-  { no: 41, name: "MT GOLDEN WILLOW", flag: "-" },
-  { no: 42, name: "MT CS FUJAIRAH", flag: "-" },
+  { no: 40, name: "MT GOLDEN PALM", flag: "LIBERIA" },
+  { no: 41, name: "MT GOLDEN WILLOW", flag: "LIBERIA" },
+  { no: 42, name: "MT CS FUJAIRAH", flag: "LIBERIA" },
 
 ];

@@ -10,13 +10,13 @@ interface portfolioProps {
 export const portfolioData: portfolioProps[] = [
     {
         icon: Ship,
-        number: "22",
+        number: "42",
         title: "Active Vessels",
         description: "Ships currently under our crew management"
     },
     {
         icon: Users,
-        number: "145+",
+        number: "250+",
         title: "Crew Members",
         description: "Qualified seafarers deployed and growing"
     },

@@ -8,33 +8,33 @@ type detailJob = {
 };
 
 export const dataCareer: Career[] = [
+  // {
+  //   title: "Chief Enginer",
+  //   level: "Officer Level",
+  //   details: [
+  //     {
+  //       job: "Container Vessel",
+  //     },
+  //     {
+  //       job: "6 Months",
+  //     },
+  //     {
+  //       job: "Europe Route",
+  //     },
+  //   ],
+  // },
   {
-    title: "Chief Enginer",
-    level: "Officer Level",
-    details: [
-      {
-        job: "Container Vessel",
-      },
-      {
-        job: "6 Months",
-      },
-      {
-        job: "Europe Route",
-      },
-    ],
-  },
-  {
-    title: "Captain",
+    title: "AB",
     level: "Officer Level",
     details: [
         {
         job: "Tanker Vessel",
       },
       {
-        job: "12 Months",
+        job: "9 Months",
       },
       {
-        job: "Asian Route",
+        job: "Europe Route",
       },
     ]
   },
@@ -43,13 +43,13 @@ export const dataCareer: Career[] = [
     level: "Officer Level",
     details: [
         {
-        job: "Cruise Ship",
+        job: "Tanker Vessels",
       },
       {
-        job: "24 Months",
+        job: "9 Months",
       },
       {
-        job: "Europe Route",
+        job: "Asian Route",
       },
     ]
   }

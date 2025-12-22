@@ -4,28 +4,33 @@ type ContactUsInfo = {
     icon: LucideIcon;
     title:string;
     description:string;
+    link: string;
 }
 
 export const DataContact:ContactUsInfo[] = [
     {
         icon: MapPin,
         title: "Head Office",
-        description: "Jl. Mawar Luar No. 20, Desa/Keluarahan Tugu Utara, Kec. Koja, Kota Adm. Jakarta Utara"
+        description: "Komplek gading bukit indah Blok L no 15, Jalan gading kiranan RT 018/RW 008 Kelapa Gading Jakarta Utara, 14240",
+        link: "https://maps.app.goo.gl/NWuzEyDQkH1jqaq86"
     },
     {
         icon:Phone,
         title: "Telephone",
-        description: "+62 812-1348-0999"
+        description: "02145852482",
+        link: "tel:+622145852482"
     },
     {
         icon: Mail,
         title: "Email",
-        description: "seacon.Aliyah@gmail.com"
+        description: "crew@sealand.co.id",
+        link: "mailto:crew@sealand.co.id"
     },
     {
         icon: MessageCircle,
         title: "WhatsApp",
-        description: "+62 812-1348-0999"
+        description: "+62 812-9480-3664",
+        link: "https://wa.me/6281294803664"
     }
 ]
 
@@ -37,14 +42,10 @@ type BusinessHours = {
 export const DataBusinessHours:BusinessHours[] = [
     {
         title: "Monday - Friday",
-        description: "09.00 AM - 06.00 PM"
+        description: "09.00 AM - 05.00 PM"
     },
     {
-        title: "Saturday",
-        description: "09.00 AM - 01.00 PM"
-    },
-    {
-        title: "Sunday",
+        title: "Saturday - Sunday",
         description: "Closed"
-    }
+    },
 ]

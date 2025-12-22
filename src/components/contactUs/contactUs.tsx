@@ -1,8 +1,14 @@
+"use client";
+import Link from "next/link";
+
 import { DataContact, DataBusinessHours } from "@/const/contactUs";
 import { Clock4, Phone } from "lucide-react";
 export default function ContactUs() {
   return (
-    <section id="contact" className="bg-primary flex items-center py-24 lg:min-h-dvh">
+    <section
+      id="contact"
+      className="bg-primary flex items-center py-24 lg:min-h-dvh"
+    >
       <div className="container-layout flex flex-col items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12 gap-8">
         <div className="flex flex-col items-center 2xl:gap-6 gap-4">
           <div className="lg:px-5 py-2 px-3 bg-secondary/10 w-fit rounded-full">
@@ -22,7 +28,9 @@ export default function ContactUs() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full gap-6">
           {DataContact.map((item, index) => (
-            <div
+            <Link
+              href={item.link}
+              target="_blank"
               key={index}
               className="w-full p-8 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-start gap-6"
             >
@@ -37,13 +45,13 @@ export default function ContactUs() {
                   {item.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="rounded-3xl w-full lg:w-1/2">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4467.949118100701!2d106.90376566747956!3d-6.119178957804852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1ff134c3b391%3A0x23899102bd00bd30!2sJl.%20Mawar%20Luar%20No.20%2C%20RT.8%2FRW.15%2C%20Tugu%20Utara%2C%20Kec.%20Koja%2C%20Jkt%20Utara%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2014260!5e0!3m2!1sid!2sid!4v1766158086008!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2101.6408745182653!2d106.89622249534818!3d-6.149541553224502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54666aa4f69%3A0x5676e6d3d106f6b4!2sGading%20Bukit%20Indah%2C%20Jl.%20Raya%20Gading%20Kirana%2C%20RT.18%2FRW.8%2C%20Klp.%20Gading%20Bar.%2C%20Kec.%20Klp.%20Gading%2C%20Jkt%20Utara%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2014240!5e0!3m2!1sid!2sid!4v1766405962884!5m2!1sid!2sid"
               width="100%"
               height="200%"
               loading="lazy"
@@ -82,7 +90,7 @@ export default function ContactUs() {
               </p>
               <div className="flex gap-3">
                 <Phone className="text-white md:size-6 size-4" />
-                <h3 className="text-xl text-white">+86 18553294307</h3>
+                <h3 className="text-xl text-white">+62 8121-3480-999</h3>
               </div>
             </div>
           </div>
