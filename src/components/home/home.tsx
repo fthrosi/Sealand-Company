@@ -2,6 +2,7 @@
 import { Anchor } from "lucide-react";
 import { useNavbarStore } from "@/store/navbar";
 import { motion, easeOut } from "motion/react";
+import Link from "next/link";
 
 export default function Home() {
   const navbarHeight = useNavbarStore((state) => state.navbarHeight);
@@ -64,41 +65,45 @@ export default function Home() {
           className="flex flex-col gap-6 lg:px-13.5"
         >
           <motion.div
-          variants={subTitleVariant}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="flex items-center gap-3">
+            variants={subTitleVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="flex items-center gap-3"
+          >
             <Anchor className="sm:size-10 size-7 text-white" />
             <h2 className="text-white text-xs sm:text-base">
               PT. Sealand Crewing International
             </h2>
           </motion.div>
           <motion.h1
-          initial="hidden"
-          whileInView="show"
-          variants={titleVarian}
-          viewport={{ once: true }}
-          className="text-white 2xl:text-text-primary xl:text-6xl lg:text-5xl sm:text-4xl text-xl font-bold leading-[1.4]">
+            initial="hidden"
+            whileInView="show"
+            variants={titleVarian}
+            viewport={{ once: true }}
+            className="text-white 2xl:text-text-primary xl:text-6xl lg:text-5xl sm:text-4xl text-xl font-bold leading-[1.4]"
+          >
             Your Trusted Partner in Maritime Crew Management
           </motion.h1>
           <motion.p
-          variants={descriptionVariant}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="2xl:w-209 lg:w-180 2xl:text-xl sm:text-sm text-xs text-white">
+            variants={descriptionVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="2xl:w-209 lg:w-180 2xl:text-xl sm:text-sm text-xs text-white"
+          >
             Professional provider of qualified seafarers for MPP, Bulk Carrier,
             and Tanker vessels. Delivering excellence with speed, flexibility,
             and 24/7 support.
           </motion.p>
-          <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white">
-            Contact Us
-          </motion.button>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="hover:cursor-pointer 2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white"
+          >
+            <Link href="#contact">Contact Us</Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
