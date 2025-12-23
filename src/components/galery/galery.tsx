@@ -67,7 +67,7 @@ export function Gallery() {
       span: "md:col-span-2 md:row-span-1",
     },
     {
-      src: "/images/7.jpeg",
+      src: "/images/20.jpeg",
       alt: "PT Sealand Team",
       span: "md:col-span-2 md:row-span-2",
     },

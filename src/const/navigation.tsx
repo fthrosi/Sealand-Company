@@ -5,7 +5,7 @@ export const navigationLinks: NavigationProps[] = [
   { title: "About Us", href: "#about" },
   { title: "Vessels", href: "#vessel" },
   { title: "Portfolio", href: "#portfolio" },
-  { title: "Certificate", href: "#certificate" },
+  { title: "License", href: "#certificate" },
   { title: "Recruitment", href: "#recruitment" },
   { title: "Careers", href: "#career" },
   { title: "Gallery", href: "#galery" },
