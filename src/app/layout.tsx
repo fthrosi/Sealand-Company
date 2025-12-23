@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PT ABC Crewing Agency | Maritime Crew Management",
+  title: "PT SEALAND Crewing International | Maritime Crew Management",
   description: "Professional maritime crewing agency providing certified and experienced seafarers for domestic and international shipping companies.",
   icons: {
     icon: "/images/logo.png",
