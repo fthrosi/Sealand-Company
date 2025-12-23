@@ -114,7 +114,7 @@ export default function ContactUs() {
           variants={cardVariant}
           className="rounded-3xl w-full lg:w-1/2">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2101.6408745182653!2d106.89622249534818!3d-6.149541553224502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54666aa4f69%3A0x5676e6d3d106f6b4!2sGading%20Bukit%20Indah%2C%20Jl.%20Raya%20Gading%20Kirana%2C%20RT.18%2FRW.8%2C%20Klp.%20Gading%20Bar.%2C%20Kec.%20Klp.%20Gading%2C%20Jkt%20Utara%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2014240!5e0!3m2!1sid!2sid!4v1766405962884!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.868651541985!2d106.89551187544198!3d-6.148337160269042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f50055e561c1%3A0xd5e196a970fc1e07!2sPT.%20SEALAND%20CREWING%20INTERNATIONAL!5e0!3m2!1sid!2sid!4v1766495171707!5m2!1sid!2sid"
               width="100%"
               height="200%"
               loading="lazy"

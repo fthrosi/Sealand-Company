@@ -127,7 +127,7 @@ export default function Careers() {
               </div>
               <Link
                 target="_blank"
-                href={"https://wa.me/6281294803664"}
+                href={"mailto:crew@sealand.co.id"}
                 className="xl:py-3.5 py-2 w-full text-xs text-white rounded-[0.75rem] bg-linear-to-r from-accent to-secondary font-semibold text-center"
               >
                 Apply

@@ -8,12 +8,14 @@ import Careers from "@/components/careers/careers";
 import ContactUs from "@/components/contactUs/contactUs";
 import Vessels from "@/components/vessels/vessels";
 import { Gallery } from "@/components/galery/galery";
+import { TeamSection } from "@/components/teams/teams";
 
 export default function GuestPage() {
   return (
     <div className="flex flex-col">
       <Home />
       <About />
+      <TeamSection />
       <VisionAndMision />
       <Recruitment />
       <Certificate />
