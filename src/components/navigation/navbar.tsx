@@ -84,7 +84,7 @@ export default function Navbar() {
           {navigationLinks.map((link) => (
             <div
               key={link.title}
-              className={`lg:py-2.5 lg:px-4 md:py-2 md:px-3.5 font-montserrat lg:text-xs xl:text-sm 2xl:text-base ${
+              className={`hover:text-[#DF1620] lg:py-2.5 lg:px-4 md:py-2 md:px-3.5 font-montserrat lg:text-xs xl:text-sm 2xl:text-base ${
                 scrolled
                   ? pathname === link.href
                     ? "bg-secondary rounded-[0.625rem] font-semibold text-white"
@@ -150,7 +150,7 @@ export default function Navbar() {
           {navigationLinks.map((link) => (
             <div
               key={link.title}
-              className={`py-2.5 px-4 font-montserrat text-sm md:text-base  rounded-[0.625rem] ${
+              className={`py-2.5 px-4 font-montserrat text-sm md:text-base  rounded-[0.625rem] hover:text-[#DF1620] ${
                 pathname === link.href
                   ? "bg-secondary font-semibold text-white"
                   : "text-primary"
@@ -166,7 +166,7 @@ export default function Navbar() {
           <Link
             href="#contact"
             className={`flex font-montserrat text-sm md:text-base px-4 py-2.5 rounded-[0.625rem] gap-1 items-start justify-start ${
-              pathname === "/about#contact"
+              pathname === "#contact"
                 ? "bg-primary font-semibold text-neutral-white"
                 : "text-neutral-black"
             }`}

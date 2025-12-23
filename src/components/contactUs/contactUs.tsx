@@ -88,7 +88,11 @@ export default function ContactUs() {
               variants={cardVariant}
               className="w-full p-8 rounded-2xl bg-white/5 border border-white/10"
             >
-              <Link href={item.link} target="_blank" className="flex flex-col items-start gap-6">
+              <Link
+                href={item.link}
+                target="_blank"
+                className="flex flex-col items-start gap-6"
+              >
                 <div className="md:p-4 p-2 rounded-xl bg-secondary w-fit">
                   <item.icon className="text-white md:size-6 size-4" />
                 </div>
@@ -105,14 +109,16 @@ export default function ContactUs() {
           ))}
         </motion.div>
         <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="flex flex-col lg:flex-row gap-8">
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row gap-8"
+        >
           <motion.div
-          variants={cardVariant}
-          className="rounded-3xl w-full lg:w-1/2">
+            variants={cardVariant}
+            className="rounded-3xl w-full lg:w-1/2"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.868651541985!2d106.89551187544198!3d-6.148337160269042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f50055e561c1%3A0xd5e196a970fc1e07!2sPT.%20SEALAND%20CREWING%20INTERNATIONAL!5e0!3m2!1sid!2sid!4v1766495171707!5m2!1sid!2sid"
               width="100%"
@@ -123,8 +129,9 @@ export default function ContactUs() {
           </motion.div>
           <div className="flex flex-col gap-6 w-full lg:w-1/2">
             <motion.div
-            variants={cardVariant}
-            className="p-8 border border-white/10 rounded-3xl flex flex-col gap-8">
+              variants={cardVariant}
+              className="p-8 border border-white/10 rounded-3xl flex flex-col gap-8"
+            >
               <div className="flex gap-4 items-center">
                 <div className="p-3 bg-secondary rounded-2xl">
                   <Clock4 className="text-white md:size-6 size-4" />
@@ -146,8 +153,9 @@ export default function ContactUs() {
               </div>
             </motion.div>
             <motion.div
-            variants={cardVariant}
-            className="p-8 bg-linear-to-br from-secondary to-accent rounded-3xl flex flex-col gap-4">
+              variants={cardVariant}
+              className="p-8 bg-linear-to-br from-secondary to-accent rounded-3xl flex flex-col gap-4"
+            >
               <h3 className="text-xl font-semibold text-white">
                 Emergency Crew Support
               </h3>

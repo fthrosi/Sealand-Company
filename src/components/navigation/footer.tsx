@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="flex lg:items-center flex-col gap-6">
             <h3 className="text-white font-semibold lg:text-lg text-sm sm:text-base">Quick Links</h3>
             <div className="flex flex-col gap-3 lg:text-lg text-sm sm:text-base">
-                <Link href="#aboutUs" className="text-white/60 hover:text-white">
+                <Link href="#about" className="text-white/60 hover:text-white">
                     About Us
                 </Link>
                 <Link href="#recruitment" className="text-white/60 hover:text-white">
@@ -29,7 +29,7 @@ export default function Footer() {
                 <Link href="#portfolio" className="text-white/60 hover:text-white">
                     Portfolio
                 </Link>
-                <Link href="#careers" className="text-white/60 hover:text-white">
+                <Link href="#career" className="text-white/60 hover:text-white">
                     Careers
                 </Link>
             </div>
@@ -40,9 +40,6 @@ export default function Footer() {
             <div className="flex gap-3">
                 <Link href={"/"} className="p-2.5 rounded-2xl bg-white/5">
                     <Instagram className="text-white size-5" />
-                </Link>
-                <Link href={"/"} className="p-2.5 rounded-2xl bg-white/5">
-                    <Facebook className="text-white size-5" />
                 </Link>
                 <Link target="_blank" href={"https://www.tiktok.com/@sealand.crewing.i?_r=1&_t=ZS-92QzFPj74Hl"} className="p-2.5 rounded-2xl bg-white/5">
                 <TiktokIcon className="text-white size-5" />
