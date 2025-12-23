@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="lg:h-dvh container-layout py-24 flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12"
+      className="lg:h-dvh overflow-x-hidden container-layout py-24 flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
