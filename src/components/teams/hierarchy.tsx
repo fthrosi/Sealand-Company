@@ -28,24 +28,9 @@ export function HierarchyTeamCard({ member, isTopLevel = false }: HierarchyTeamC
         <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
           {/* Name & Position */}
           <h4 className="text-2xl sm:text-2xl font-bold mb-2">{member.name}</h4>
-          <p className="text-sm sm:text-base font-medium text-blue-200 mb-4">{member.position}</p>
-
-          {/* Divider */}
           <div className="w-12 h-1 bg-linear-to-r from-blue-400 to-blue-200 rounded-full mb-4"></div>
-
-          {/* Contact Information */}
-          <div className="space-y-2">
-            {/* Email */}
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-blue-200 shrink-0" />
-              <a
-                href={`mailto:${member.email}`}
-                className="text-xs sm:text-sm text-blue-100 hover:text-white transition-colors duration-200 break-all"
-              >
-                {member.email}
-              </a>
-            </div>
-          </div>
+          <p className="text-sm sm:text-base font-medium text-blue-200 mb-4">{member.position}</p>
+          
         </div>
       </div>
 
@@ -66,21 +51,11 @@ export function HierarchyTeamCard({ member, isTopLevel = false }: HierarchyTeamC
 
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                     <h4 className="text-2xl sm:text-2xl font-bold mb-2">{subordinate.name}</h4>
+                     <div className="w-12 h-1 bg-linear-to-r from-blue-400 to-blue-200 rounded-full mb-4"></div>
                     <p className="text-sm sm:text-base font-medium text-blue-200 mb-4">{subordinate.position}</p>
 
-                    <div className="w-12 h-1 bg-linear-to-r from-blue-400 to-blue-200 rounded-full mb-4"></div>
+                   
 
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <Mail className="w-4 h-4 text-blue-200 shrink-0" />
-                        <a
-                          href={`mailto:${subordinate.email}`}
-                          className="text-xs sm:text-sm text-blue-100 hover:text-white transition-colors duration-200 break-all"
-                        >
-                          {subordinate.email}
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -101,31 +76,9 @@ export function HierarchyTeamCard({ member, isTopLevel = false }: HierarchyTeamC
 
                             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                               <h4 className="text-2xl sm:text-2xl font-bold mb-2">{subSub.name}</h4>
+                              <div className="w-12 h-1 bg-linear-to-r from-blue-400 to-blue-200 rounded-full mb-4"></div>
                               <p className="text-sm sm:text-base font-medium text-blue-200 mb-4">{subSub.position}</p>
 
-                              <div className="w-12 h-1 bg-linear-to-r from-blue-400 to-blue-200 rounded-full mb-4"></div>
-
-                              <div className="space-y-2">
-                                <div className="flex items-center gap-2">
-                                  <Mail className="w-4 h-4 text-blue-200 shrink-0" />
-                                  <a
-                                    href={`mailto:${subSub.email}`}
-                                    className="text-xs sm:text-sm text-blue-100 hover:text-white transition-colors duration-200 break-all"
-                                  >
-                                    {subSub.email}
-                                  </a>
-                                </div>
-
-                                <div className="flex items-center gap-2">
-                                  <Phone className="w-4 h-4 text-blue-200 shrink-0" />
-                                  <a
-                                    href={`tel:${subSub.phone}`}
-                                    className="text-xs sm:text-sm text-blue-100 hover:text-white transition-colors duration-200"
-                                  >
-                                    {subSub.phone}
-                                  </a>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>

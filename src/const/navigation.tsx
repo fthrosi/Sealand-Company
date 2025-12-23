@@ -9,5 +9,5 @@ export const navigationLinks: NavigationProps[] = [
   { title: "Vessels", href: "/#vessel" },
   { title: "Certificate", href: "#certificate" },
   { title: "Gallery", href: "#galery" },
-  { title: "Teams", href: "/teams" },
+  { title: "Teams", href: "#teams" },
 ];

@@ -59,7 +59,7 @@ export function TeamSection() {
   };
 
   return (
-    <section className="py-16 2xl:py-32">
+    <section id="teams" className="py-16 2xl:py-32">
       <div className="container-layout flex flex-col items-center justify-center gap-8 2xl:gap-12">
         {/* Header */}
         <motion.div

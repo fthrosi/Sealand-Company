@@ -2,7 +2,6 @@ export interface TeamMember {
   id: string
   name: string
   position: string
-  email: string
   photo: string
   managerId?: string | null
 }
