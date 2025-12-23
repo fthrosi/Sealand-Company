@@ -54,7 +54,7 @@ export default function Certificate() {
             variants={titleVarian}
             className="text-primary xl:text-text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold text-center"
           >
-            International Licence
+            International License
           </motion.h2>
           <motion.p
             variants={itemVariant}
