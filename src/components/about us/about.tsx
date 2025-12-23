@@ -40,7 +40,7 @@ export default function About() {
         className="w-1/2 flex items-center"
       >
         <Image
-          src="/images/nahkoda.jpg"
+          src="/images/7.jpeg"
           alt="Nahkoda"
           width={560}
           height={600}
