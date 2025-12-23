@@ -100,9 +100,13 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="hover:cursor-pointer 2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white"
           >
-            <Link href="#contact">Contact Us</Link>
+            <Link
+              className="hover:cursor-pointer 2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white"
+              href="#contact"
+            >
+              Contact Us
+            </Link>
           </motion.div>
         </motion.div>
       </div>
