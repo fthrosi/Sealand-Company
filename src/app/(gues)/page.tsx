@@ -15,14 +15,14 @@ export default function GuestPage() {
     <div className="flex flex-col">
       <Home />
       <About />
-      <TeamSection />
       <VisionAndMision />
-      <Recruitment />
-      <Certificate />
-      <Portfolio />
       <Vessels />
+      <Portfolio />
+      <Certificate />
+      <Recruitment />
       <Careers/>
       <Gallery/>
+      <TeamSection />
       <ContactUs/>
     </div>
   );
