@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="lg:h-dvh overflow-x-hidden container-layout py-24 flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12"
+      className="lg:min-h-dvh overflow-x-hidden container-layout py-24 flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -66,8 +66,9 @@ export default function About() {
           viewport={{ once: true }}
           className="text-[#1434A3] xl:leading-15 xl:text-5xl lg:text-3xl lg:leading-11 text-2xl font-bold"
         >
-          <span className="text-[#DF1620]">PT. Sea</span>land Crewing
-          International
+          PT. Sea
+          <span className="text-[#DF1620]">land</span> <br />
+          Crewing International
         </motion.h1>
         <motion.div
           variants={containerVariant}
@@ -100,15 +101,17 @@ export default function About() {
           </motion.p>
         </motion.div>
         <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           {aboutUsData.map((item, index) => (
-            <motion.div 
-            variants={itemVariant}
-            className="flex gap-4" key={index}>
+            <motion.div
+              variants={itemVariant}
+              className="flex gap-4"
+              key={index}
+            >
               <div className="p-3 h-fit rounded-[0.75rem] bg-secondary/10 flex items-center justify-center">
                 <item.icon className="xl:size-6 size-4 lg:size-5 text-secondary" />
               </div>

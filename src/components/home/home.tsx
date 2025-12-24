@@ -105,7 +105,7 @@ export default function Home() {
               className="hover:cursor-pointer 2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white"
               href="#contact"
             >
-              Contact Us
+              Join Now
             </Link>
           </motion.div>
         </motion.div>

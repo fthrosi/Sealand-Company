@@ -9,6 +9,7 @@ import ContactUs from "@/components/contactUs/contactUs";
 import Vessels from "@/components/vessels/vessels";
 import { Gallery } from "@/components/galery/galery";
 import { TeamSection } from "@/components/teams/teams";
+import RecruitmentSection from "@/components/recruitmen/recruitment";
 
 export default function GuestPage() {
   return (
@@ -19,10 +20,11 @@ export default function GuestPage() {
       <Vessels />
       <Portfolio />
       <Certificate />
-      <Recruitment />
+      {/* <Recruitment /> */}
+      <RecruitmentSection />
       <Careers/>
-      <Gallery/>
       <TeamSection />
+      <Gallery/>
       <ContactUs/>
     </div>
   );

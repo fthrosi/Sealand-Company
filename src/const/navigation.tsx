@@ -8,6 +8,6 @@ export const navigationLinks: NavigationProps[] = [
   { title: "License", href: "#certificate" },
   { title: "Recruitment", href: "#recruitment" },
   { title: "Careers", href: "#career" },
-  { title: "Gallery", href: "#galery" },
   { title: "Teams", href: "#teams" },
+  { title: "Gallery", href: "#galery" },
 ];

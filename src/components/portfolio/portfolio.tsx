@@ -2,6 +2,7 @@
 
 import { motion, easeOut } from "motion/react";
 import { portfolioData } from "@/const/portfolio";
+import Image from "next/image";
 export default function Portfolio() {
   const titleVarian = {
     hidden: { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
@@ -69,21 +70,30 @@ export default function Portfolio() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="flex flex-col lg:flex-row 2xl:gap-6 xl:gap-4 lg:gap-2 gap-4">
+      className="flex flex-col lg:flex-row 2xl:gap-6 xl:gap-4 lg:gap-2 gap-4 lg:items-stretch">
         {portfolioData.map((item) => (
           <motion.div
           variants={cardVariant}
-          key={item.title} className="lg:w-1/4 rounded-3xl 2xl:p-8 xl:p-6 p-4 bg-linear-to-b to-secondary from-[#1E3A5F]">
-            <div className="rounded-2xl p-3.5 bg-white/10 w-fit">
-              <item.icon className="lg:size-7 size-5 text-light-blue" />
+          key={item.title} className="relative lg:w-1/4 rounded-3xl overflow-hidden">
+            <Image
+            src={item.img}
+            width={300}
+            height={300}
+            alt={item.title}
+            className="h-full w-full object-cover absolute inset-0 z-0"
+            />
+            <div className="relative z-10 2xl:p-8 xl:p-6 p-4 bg-[#1E3A5F]/40 h-full">
+              <div className="rounded-2xl p-3.5 bg-white/60 w-fit">
+                <item.icon className="lg:size-7 size-5 text-light-blue" />
+              </div>
+              <h3 className="text-white font-bold 2xl:text-5xl text-3xl mt-6">{item.number}</h3>
+              <h4 className="text-white font-semibold 2xl:text-xl text-sm mt-3">
+                {item.title}
+              </h4>
+              <p className="text-white/70 text-xs mt-2 xl:w-60.5">
+                {item.description}
+              </p>
             </div>
-            <h3 className="text-white font-bold 2xl:text-5xl text-3xl mt-6">{item.number}</h3>
-            <h4 className="text-white font-semibold 2xl:text-xl text-sm mt-3">
-              {item.title}
-            </h4>
-            <p className="text-white/70 text-xs mt-2 xl:w-60.5">
-              {item.description}
-            </p>
           </motion.div>
         ))}
       </motion.div>
