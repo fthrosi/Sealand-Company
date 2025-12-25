@@ -66,7 +66,7 @@ export default function Vessels() {
             width={300}
             height={300}
             alt={"type"}
-            className="2xl:w-120 lg:w-70 lg:h-15 w-40 md:w-55 h-10 2xl:h-20 object-cover"
+            className="2xl:w-120 lg:w-90 lg:h-15 w-40 md:w-55 h-10 2xl:h-20 object-cover"
           />
           <h2 className="text-[#DF1620] text-4xl font-bold leading-15 text-center">
             SEACON SHIPS MANAGEMENT (EUROPE) S.A
