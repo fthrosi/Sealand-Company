@@ -30,16 +30,6 @@ export default function Vessels() {
       },
     },
   };
-  const cardVariant = {
-    hidden: { opacity: 0, scale: 0.9 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
   return (
     <section
       id="vessel"
@@ -47,8 +37,42 @@ export default function Vessels() {
         paddingTop: `${navbarHeight}px`,
         paddingBottom: `${navbarHeight}px`,
       }}
-      className="container-layout lg:min-h-dvh flex flex-col gap-8 justify-center"
+      className="container-layout lg:min-h-dvh flex flex-col gap-14 justify-center"
     >
+      <div className="flex flex-col items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12 gap-8">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col gap-4 w-full justify-center items-center"
+        >
+          <motion.h2
+            variants={titleVarian}
+            className="text-primary xl:text-text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold text-center"
+          >
+            Our Partners
+          </motion.h2>
+          <motion.p
+            variants={itemVariant}
+            className="xl:w-182.5 sm:w-100 lg:w-140 text-muted text-center xl:text-lg text-xs lg:text-base"
+          >
+            We collaborate with industry-leading partners to ensure quality and
+          </motion.p>
+        </motion.div>
+        <div className="flex flex-col gap-8 items-center">
+          <Image
+            src="/images/partner.jpeg"
+            width={300}
+            height={300}
+            alt={"type"}
+            className="2xl:w-100 lg:w-70 lg:h-15 w-40 md:w-55 h-10 2xl:h-20 object-cover"
+          />
+          <h2 className="text-[#DF1620] text-4xl font-bold leading-15 text-center">
+            SEACON SHIPS MANAGEMENT (EUROPE) S.A
+          </h2>
+        </div>
+      </div>
       <div className="w-full">
         <motion.h2
           variants={titleVarian}
@@ -95,70 +119,22 @@ export default function Vessels() {
             <motion.div
               variants={itemVariant}
               key={index}
-              className="relative rounded-3xl overflow-hidden"
+              className="relative rounded-3xl overflow-hidden 2xl:size-75"
             >
               <Image
                 src={item.img}
                 width={300}
                 height={300}
                 alt={"type"}
-                className="h-full w-full object-cover z-0"
+                className="h-full w-full absolute inset-0 object-cover z-0"
               />
-              {/* <div className="relative z-10 2xl:p-8 xl:p-6 p-4 bg-[#1E3A5F]/40 h-full">
-                <div className="rounded-2xl p-3.5 bg-white/60 w-fit">
-                  <item.icon className="lg:size-7 size-5 text-light-blue" />
-                </div>
-                <h3 className="text-white font-bold 2xl:text-5xl text-3xl mt-6">
-                  {item.number}
-                </h3>
+              <div className="relative flex items-end z-10 2xl:p-8 xl:p-6 p-4 bg-[#1E3A5F]/40 h-full">
                 <h4 className="text-white font-semibold 2xl:text-xl text-sm mt-3">
                   {item.title}
                 </h4>
-                <p className="text-white/70 text-xs mt-2 xl:w-60.5">
-                  {item.description}
-                </p>
-              </div> */}
+              </div>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-      <div className="flex flex-col items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12 gap-8">
-        <motion.div
-          variants={containerVariant}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="flex flex-col gap-4 w-full justify-center items-center"
-        >
-          <motion.h2
-            variants={titleVarian}
-            className="text-primary xl:text-text-secondary text-2xl sm:text-3xl lg:text-4xl font-bold text-center"
-          >
-            Our Partners
-          </motion.h2>
-          <motion.p
-            variants={itemVariant}
-            className="xl:w-182.5 sm:w-100 lg:w-140 text-muted text-center xl:text-lg text-xs lg:text-base"
-          >
-            We collaborate with industry-leading partners to ensure quality and
-          </motion.p>
-        </motion.div>
-        <motion.div
-          variants={cardVariant}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{
-            once:true
-          }}
-          className="relative rounded-3xl overflow-hidden"
-        >
-          <Image
-            src="/images/partner.jpg"
-            width={300}
-            height={300}
-            alt={"type"}
-            className="h-full w-full object-cover z-0"
-          />
         </motion.div>
       </div>
     </section>

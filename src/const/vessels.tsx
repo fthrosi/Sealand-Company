@@ -1,4 +1,4 @@
-import { VesselType,VesselProps } from "@/types/vesels";
+import { VesselType,VesselProps,PartnerType } from "@/types/vesels";
 
 export const vesselData: VesselType[] = [
   { no: 1, name: "MV GREEN AANEKOSKI", flag: "PANAMA" },
@@ -49,15 +49,28 @@ export const vesselData: VesselType[] = [
 
 export const vesselTypeData:VesselProps[] = [
   {
+    title:"LPG VESSEL",
     img:"/images/type1.jpeg"
   },
   {
+    title:"CAR CARRIER VESSEL",
     img:"/images/type2.jpeg"
   },
   {
+    title:"CHEMICAL TANKER",
     img:"/images/type3.jpeg"
   },
   {
+    title:"MULTIPURPOSE VESSEL",
     img:"/images/type4.jpeg"
+  }
+]
+
+export const partnerData:PartnerType[] = [
+  {
+    name:"SEACON SHIPS MANAGEMENT (EUROPE)"
+  },
+  {
+    name:""
   }
 ]

@@ -7,5 +7,10 @@ export type VesselType = {
 }
 
 export type VesselProps = {
+    title: string;
     img: string;
+}
+
+export type PartnerType = {
+    name: string;
 }
