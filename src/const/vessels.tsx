@@ -1,4 +1,4 @@
-import { VesselType } from "@/types/vesels";
+import { VesselType,VesselProps } from "@/types/vesels";
 
 export const vesselData: VesselType[] = [
   { no: 1, name: "MV GREEN AANEKOSKI", flag: "PANAMA" },
@@ -45,3 +45,19 @@ export const vesselData: VesselType[] = [
   { no: 42, name: "MT CS FUJAIRAH", flag: "LIBERIA" },
 
 ];
+
+
+export const vesselTypeData:VesselProps[] = [
+  {
+    img:"/images/type1.jpeg"
+  },
+  {
+    img:"/images/type2.jpeg"
+  },
+  {
+    img:"/images/type3.jpeg"
+  },
+  {
+    img:"/images/type4.jpeg"
+  }
+]

@@ -55,7 +55,7 @@ export default function Home() {
         playsInline
       ></video>
       <div className="absolute z-12 w-full h-39.5 bg-linear-to-t from-white to-transparent bottom-0 " />
-      <div className="absolute inset-0 bg-primary/70" />
+      <div className="absolute inset-0 bg-primary/50" />
       <div className="w-full h-full z-13 container-layout flex flex-col justify-center">
         <motion.div
           variants={containerVariant}
@@ -83,7 +83,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-white 2xl:text-text-primary xl:text-6xl lg:text-5xl sm:text-4xl text-xl font-bold leading-[1.4]"
           >
-            Your Trusted Partner in Maritime Crew Management
+            Professional Maritime Crewing for Reliable Vessel Operations
           </motion.h1>
           <motion.p
             variants={descriptionVariant}
@@ -92,20 +92,21 @@ export default function Home() {
             viewport={{ once: true }}
             className="2xl:w-209 lg:w-180 2xl:text-xl sm:text-sm text-xs text-white"
           >
-            Professional provider of qualified seafarers for MPP, Bulk Carrier,
-            and Tanker vessels. Delivering excellence with speed, flexibility,
-            and 24/7 support.
+            Providing qualified and compliant seafarers for MPP, Bulk Carrier,
+            and Tanker vessels, supporting safe and efficient maritime
+            operations.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
           >
             <Link
               className="hover:cursor-pointer 2xl:px-8 2xl:py-4 px-6 text-sm sm:text-base py-2 mt-6.5 w-fit bg-secondary rounded-2xl text-white"
-              href="#contact"
+              href="/contact"
             >
-              Join Now
+              Discuss Your Crewing Needs
             </Link>
           </motion.div>
         </motion.div>

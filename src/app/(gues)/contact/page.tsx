@@ -4,6 +4,7 @@ import { motion, easeOut } from "motion/react";
 
 import { DataContact, DataBusinessHours } from "@/const/contactUs";
 import { Clock4, Phone } from "lucide-react";
+import { useNavbarStore } from "@/store/navbar";
 export default function ContactUs() {
   const titleVarian = {
     hidden: { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
@@ -37,10 +38,12 @@ export default function ContactUs() {
       },
     },
   };
+   const navbarHeight = useNavbarStore((state) => state.navbarHeight);
   return (
     <section
       id="contact"
-      className="bg-primary flex items-center py-24 lg:min-h-dvh"
+      style={{ paddingTop: navbarHeight, paddingBottom: navbarHeight }}
+      className="bg-primary flex items-center lg:min-h-dvh"
     >
       <div className="container-layout flex flex-col items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12 gap-8">
         <motion.div

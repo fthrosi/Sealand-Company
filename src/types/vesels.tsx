@@ -5,3 +5,7 @@ export type VesselType = {
     name: string;
     flag: string;
 }
+
+export type VesselProps = {
+    img: string;
+}

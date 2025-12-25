@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { navigationLinks } from "@/const/navigation";
 import { usePathname } from "next/navigation";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect, use } from "react";
 import { useRef } from "react";
 import { useSidebarStore } from "@/store/sidebar";
@@ -75,7 +74,7 @@ export default function Navbar() {
           <img
             src={"/images/logo.png"}
             alt="Logo Sealand"
-            className="w-20 h-8 md:w-25 md:h-10 xl:w-28 xl:h-12"
+            className="w-22 h-10 md:w-27 md:h-12 xl:w-30 xl:h-14"
           />
         </Link>
 
@@ -84,14 +83,18 @@ export default function Navbar() {
           {navigationLinks.map((link) => (
             <div
               key={link.title}
-              className={`hover:text-[#DF1620] lg:py-2.5 lg:px-4 md:py-2 md:px-3.5 font-montserrat lg:text-xs xl:text-sm 2xl:text-base ${
+              className={`lg:py-2.5 lg:px-4 md:py-2 md:px-3.5 font-montserrat lg:text-xs xl:text-sm 2xl:text-base ${
                 scrolled
                   ? pathname === link.href
                     ? "bg-secondary rounded-[0.625rem] font-semibold text-white"
-                    : "text-primary"
+                    : "text-primary hover:text-[#DF1620]"
                   : pathname === link.href
                   ? "bg-secondary rounded-[0.625rem] font-semibold text-white"
-                  : "text-white"
+                  : pathname !== "/"
+                  ? pathname === "/contact"
+                    ? "text-white hover:text-[#DF1620]"
+                    : "text-primary hover:text-[#DF1620]"
+                  : "text-white hover:text-[#DF1620]"
               }`}
             >
               <Link href={link.href}>{link.title}</Link>
@@ -101,7 +104,7 @@ export default function Navbar() {
 
         {/* Tombol Contact Us (desktop) */}
         <Link
-          href="#contact"
+          href="/contact"
           className="hidden xl:flex bg-secondary hover:bg-secondary/80 text-white font-montserrat lg:text-xs xl:text-sm font-bold lg:px-4 lg:py-2.5 md:py-2 md:px-3.5 rounded-[0.625rem] gap-1 items-center"
         >
           Contact Us
@@ -164,9 +167,9 @@ export default function Navbar() {
 
           {/* Contact Us (mobile) */}
           <Link
-            href="#contact"
+            href="/contact"
             className={`flex font-montserrat text-sm md:text-base px-4 py-2.5 rounded-[0.625rem] gap-1 items-start justify-start ${
-              pathname === "#contact"
+              pathname === "/contact"
                 ? "bg-primary font-semibold text-neutral-white"
                 : "text-neutral-black"
             }`}

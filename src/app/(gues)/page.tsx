@@ -10,22 +10,29 @@ import Vessels from "@/components/vessels/vessels";
 import { Gallery } from "@/components/galery/galery";
 import { TeamSection } from "@/components/teams/teams";
 import RecruitmentSection from "@/components/recruitmen/recruitment";
+import { WhyChooseUs } from "@/components/home/whyChooseUs";
+import { CompanySnapshot } from "@/components/home/companySnapShot";
+import { CrewingServices } from "@/components/home/service";
+import { CallToAction } from "@/components/home/cta";
 
 export default function GuestPage() {
   return (
     <div className="flex flex-col">
       <Home />
-      <About />
+      <CompanySnapshot />
+      <CrewingServices />
+      <WhyChooseUs />
+      <CallToAction />
+      {/* <About />
       <VisionAndMision />
       <Vessels />
       <Portfolio />
       <Certificate />
-      {/* <Recruitment /> */}
       <RecruitmentSection />
       <Careers/>
       <TeamSection />
       <Gallery/>
-      <ContactUs/>
+      <ContactUs/> */}
     </div>
   );
 }

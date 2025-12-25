@@ -2,8 +2,10 @@
 
 import { Eye, Target } from "lucide-react";
 import { motion, easeOut, easeInOut } from "motion/react";
+import { useNavbarStore } from "@/store/navbar";
 
 export default function VisionAndMision() {
+  const navbarHeight = useNavbarStore((state) => state.navbarHeight);
   const titleVarian = {
     hidden: { opacity: 0, clipPath: "inset(0% 100% 0% 0%)" },
     show: {
@@ -41,7 +43,11 @@ export default function VisionAndMision() {
     } },
   };
   return (
-    <section id="visi" className="py-24  bg-background-secondary overflow-x-hidden">
+    <section 
+      id="visi" 
+      className="bg-background-secondary overflow-x-hidden"
+      style={{ paddingTop: navbarHeight, paddingBottom: navbarHeight }}
+    >
       <div className="container-layout flex flex-col gap-16">
         <motion.div
           variants={containerVariant}
