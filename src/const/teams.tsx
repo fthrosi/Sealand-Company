@@ -54,20 +54,6 @@ export const divisionsData: Division[] = [
         managerId: "3",
       },
       {
-        id: "7",
-        name: "Aqil",
-        position: "Crewing Staff",
-        photo: "/images/teams/13.jpeg",
-        managerId: "3",
-      },
-      {
-        id: "8",
-        name: "Wisnu",
-        position: "Crewing Staff",
-        photo: "/images/teams/10.jpeg",
-        managerId: "3",
-      },
-      {
         id: "9",
         name: "Kurriyah",
         position: "Crewing Staff",
@@ -93,7 +79,7 @@ export const divisionsData: Division[] = [
         position: "Finance & Document",
         photo: "/images/teams/5.jpeg",
         managerId: "10",
-      }
+      },
     ],
   },
   {
@@ -106,7 +92,7 @@ export const divisionsData: Division[] = [
         position: "HR Manager",
         photo: "/images/teams/14.jpeg",
         managerId: null,
-      }
+      },
     ],
   },
   {
@@ -126,7 +112,27 @@ export const divisionsData: Division[] = [
         position: "Deck Trainer",
         photo: "/images/teams/11.jpeg",
         managerId: null,
-      }
+      },
     ],
   },
-]
+  {
+    id: "operation",
+    name: "Operation",
+    members: [
+      {
+        id: "7",
+        name: "Aqil",
+        position: "Operation Staff",
+        photo: "/images/teams/13.jpeg",
+        managerId: null,
+      },
+      {
+        id: "8",
+        name: "Wisnu",
+        position: "Visa & Document Staff",
+        photo: "/images/teams/10.jpeg",
+        managerId: null,
+      },
+    ],
+  },
+];
