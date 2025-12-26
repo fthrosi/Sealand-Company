@@ -119,7 +119,7 @@ export default function Vessels() {
             <motion.div
               variants={itemVariant}
               key={index}
-              className="relative rounded-3xl overflow-hidden 2xl:size-75"
+              className="relative rounded-3xl overflow-hidden w-70 h-35 sm:w-90 sm:h-50 lg:w-54 xl:w-70 2xl:size-75"
             >
               <Image
                 src={item.img}

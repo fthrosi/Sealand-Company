@@ -79,7 +79,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation links desktop */}
-        <div className="lg:flex xl:gap-22xl:gap-4 hidden text-white">
+        <div className="lg:flex xl:gap-4 2xl:gap-1 hidden text-white">
           {navigationLinks.map((link) => (
             <div
               key={link.title}
@@ -105,7 +105,7 @@ export default function Navbar() {
         {/* Tombol Contact Us (desktop) */}
         <Link
           href="/contact"
-          className="hidden xl:flex bg-secondary hover:bg-secondary/80 text-white font-montserrat lg:text-xs xl:text-sm font-bold lg:px-4 lg:py-2.5 md:py-2 md:px-3.5 rounded-[0.625rem] gap-1 items-center"
+          className="hidden xl:flex bg-secondary hover:bg-secondary/80 text-white font-montserrat lg:text-[0.6rem] xl:text-sm font-bold lg:px-4 lg:py-2.5 md:py-2 md:px-3.5 rounded-[0.625rem] gap-1 items-center"
         >
           Contact Us
         </Link>
@@ -116,14 +116,26 @@ export default function Navbar() {
             <X
               onClick={setIsMenuClose}
               className={`2xl:size-6 size-4 ${
-                scrolled ? "text-secondary" : "text-white"
+                scrolled
+                  ? "text-secondary"
+                  : pathname === "/"
+                  ? "text-white"
+                  : pathname === "/contact"
+                  ? "text-white"
+                  : "text-secondary"
               }`}
             />
           ) : (
             <Menu
               onClick={setIsMenuOpen}
               className={`2xl:size-6 size-4 ${
-                scrolled ? "text-secondary" : "text-white"
+                scrolled
+                  ? "text-secondary"
+                  : pathname === "/"
+                  ? "text-white"
+                  : pathname === "/contact"
+                  ? "text-white"
+                  : "text-secondary"
               }`}
             />
           )}
