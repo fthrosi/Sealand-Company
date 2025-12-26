@@ -149,7 +149,7 @@ export default function Navbar() {
           height: `calc(100vh - ${navbarHeight}px)`,
         }}
         className={`
-          md:hidden fixed overflow-y-auto w-full bg-white shadow-lg z-60 p-4
+          lg:hidden fixed overflow-y-auto w-full bg-white shadow-lg z-60 p-4
           transition-all duration-300 ease-in-out
           h-dvh flex flex-col justify-center py-10
           ${
