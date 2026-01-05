@@ -57,7 +57,7 @@ export const vesselTypeData:VesselProps[] = [
     img:"/images/type2.jpeg"
   },
   {
-    title:"CHEMICAL TANKER",
+    title:"OIL CHEMICAL TANKER",
     img:"/images/type3.jpeg"
   },
   {

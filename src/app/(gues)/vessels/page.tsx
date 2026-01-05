@@ -69,6 +69,9 @@ export default function Vessels() {
             className="2xl:w-120 lg:w-90 lg:h-15 w-60 md:w-75 h-10 md:h-13 2xl:h-20 object-cover"
           />
           <h2 className="text-[#DF1620] text-xl sm:text-2xl lg:text-3xl font-bold text-center">
+            SEACON SHIPS MANAGEMENT CO LTD
+          </h2>
+          <h2 className="text-[#DF1620] text-xl sm:text-2xl lg:text-3xl font-bold text-center">
             SEACON SHIPS MANAGEMENT (EUROPE) S.A
           </h2>
         </div>

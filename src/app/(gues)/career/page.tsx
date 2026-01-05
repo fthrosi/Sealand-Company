@@ -81,7 +81,7 @@ export default function Careers() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className={`flex w-full flex-col lg:flex-row gap-8 ${
+          className={`flex w-full flex-col sm:flex-row sm:justify-center gap-8 ${
             dataCareer.length % 3 === 0
               ? "lg:justify-between"
               : "lg:justify-start"

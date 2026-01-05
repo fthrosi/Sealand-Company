@@ -35,7 +35,7 @@ export default function About() {
       style={{
         paddingTop: `${navbarHeight}px`
       }}
-      className={`lg:min-h-dvh overflow-x-hidden container-layout flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12`}
+      className={`lg:min-h-dvh overflow-x-hidden py-24 container-layout flex flex-col md:flex-row items-center justify-center 2xl:gap-16 lg:gap-14 xl:gap-15 md:gap-12`}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -110,6 +110,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
+          className="flex flex-col gap-4"
         >
           {aboutUsData.map((item, index) => (
             <motion.div

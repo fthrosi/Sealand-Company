@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, easeOut } from "motion/react";
 import { useNavbarStore } from "@/store/navbar";
-import { title } from "process";
 
 export default function RecruitmentSection() {
   const [activeStep, setActiveStep] = useState(1);
@@ -32,7 +31,7 @@ export default function RecruitmentSection() {
       details:
         "Our experienced maritime professionals conduct detailed interviews to evaluate your expertise and fit with our team.",
       color: "bg-teal-500",
-      bgImage: "/images/6.jpeg",
+      bgImage: "/images/interview.jpeg",
     },
     {
       id: 3,

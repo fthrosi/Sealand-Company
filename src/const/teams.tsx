@@ -122,7 +122,7 @@ export const divisionsData: Division[] = [
       {
         id: "7",
         name: "Aqil",
-        position: "Operation Staff",
+        position: "Operational Staff",
         photo: "/images/teams/13.jpeg",
         managerId: null,
       },

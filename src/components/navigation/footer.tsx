@@ -20,16 +20,16 @@ export default function Footer() {
           <div className="flex lg:items-center flex-col gap-6">
             <h3 className="text-white font-semibold lg:text-lg text-sm sm:text-base">Quick Links</h3>
             <div className="flex flex-col gap-3 lg:text-lg text-sm sm:text-base">
-                <Link href="#about" className="text-white/60 hover:text-white">
+                <Link href="/about" className="text-white/60 hover:text-white">
                     About Us
                 </Link>
-                <Link href="#recruitment" className="text-white/60 hover:text-white">
+                <Link href="/recruitment" className="text-white/60 hover:text-white">
                     Recruitment
                 </Link>
-                <Link href="#portfolio" className="text-white/60 hover:text-white">
-                    Portfolio
+                <Link href="/vessels" className="text-white/60 hover:text-white">
+                    Vessels
                 </Link>
-                <Link href="#career" className="text-white/60 hover:text-white">
+                <Link href="/career" className="text-white/60 hover:text-white">
                     Careers
                 </Link>
             </div>
